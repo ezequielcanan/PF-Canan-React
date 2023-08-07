@@ -1,0 +1,27 @@
+.navbar-expand-md {
+    background-color: $bg-gray;
+
+    .navbar-collapse {
+        justify-content: flex-end;
+
+        .navbar-nav {
+            gap: 30px;
+            
+            a {
+                color: $bg-light;
+                &:hover {
+                    color: $bg-green !important;
+                }
+                &:focus {
+                    color: $bg-light;
+                }
+            }
+
+            .active {
+                color: $bg-light !important;
+            }
+
+        }
+
+    }
+}

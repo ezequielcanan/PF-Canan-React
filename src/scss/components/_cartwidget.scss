@@ -1,0 +1,16 @@
+.cart-widget {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    .cart-icon {
+        color: $bg-white;
+        font-size: 25px;
+    }
+    .cart-quantity {
+        display: flex;
+        place-content: center;
+        @include size(25px,25px);
+        background-color: $bg-blue;
+        border-radius: 50%;
+    }
+}
