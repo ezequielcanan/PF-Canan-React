@@ -1,7 +1,8 @@
+import { Link } from "react-router-dom"
 import CartWidget from "../CartWidget"
 
 const Navbar = () => {
-  let categories = ["Motherboards", "CPUs", "GPUs", "RAM", "SSD", "PCs armadas"]
+  let categories = ["Motherboards", "CPUs", "GPUs", "RAM", "SSD", "PCs"]
   return (
     <header>
       <nav className="navbar navbar-dark navbar-expand-md">
@@ -13,9 +14,9 @@ const Navbar = () => {
           <div className="collapse navbar-collapse" id="navbar-responsive">
             <ul className="navbar-nav">
               <CartWidget quantity={2} />
-              {categories.map((c) =>
-                <li className="nav-item">
-                  <a className="nav-link" href="#">{c}</a>
+              {categories.map((c,i) =>
+                <li className="nav-item" key={i}>
+                  <Link to={`/category/${c}`}>{c}</Link>
                 </li>)}
             </ul>
           </div>
