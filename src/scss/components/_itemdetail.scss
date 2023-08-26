@@ -1,0 +1,13 @@
+.row-details {
+  justify-content: center;
+  .container-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    .container-img-detail {
+      border-radius: 10px;
+      overflow: hidden;
+    }
+  }
+}

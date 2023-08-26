@@ -1,12 +1,18 @@
-const Item = ({title, description}) => {
+import { Link } from "react-router-dom";
+
+const Item = ({ title, description, id }) => {
   return (
-    <div className="card">
-      <img src="" className="card-image-top" alt="" />
+    <div className="card col-md-3">
+      <img src="/imagen.jpg" className="card-image-top" alt="" />
       <div className="card-body">
         <h5 className="card-title">{title}</h5>
         <p className="card-text">{description}</p>
-        <button className="btn btn-buy"></button>
+        <Link className="btn btn-primary" to={`/item/${id}`}>
+          View more
+        </Link>
       </div>
     </div>
-  )
-}
+  );
+};
+
+export default Item;
