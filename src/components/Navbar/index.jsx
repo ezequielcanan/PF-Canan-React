@@ -23,7 +23,7 @@ const Navbar = () => {
           </button>
           <div className="collapse navbar-collapse" id="navbar-responsive">
             <ul className="navbar-nav">
-              <CartWidget quantity={2} />
+              <CartWidget />
               {categories.map((c, i) => (
                 <li className="nav-item" key={i}>
                   <Link className="nav-link" to={`/category/${c}`}>

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import fetchProducts from "../../utils/fetchProducts";
+import { fetchProducts } from "../../utils/fetchProducts";
 import { useParams } from "react-router-dom";
 import Item from "../../components/Item";
 import Loading from "../../components/Loading";
@@ -11,7 +11,7 @@ const ItemListContainer = () => {
   useEffect(() => {
     fetchProducts().then((products) => {
       category
-        ? setProducts(products.filter((p) => p.category === category))
+        ? setProducts(products.filter((p) => p.categoryId === category))
         : setProducts(products);
       setLoading(false);
     });
@@ -28,6 +28,7 @@ const ItemListContainer = () => {
               id={product.id}
               description={product.description}
               title={product.name}
+              image={product.image}
             />
           ))
         )}

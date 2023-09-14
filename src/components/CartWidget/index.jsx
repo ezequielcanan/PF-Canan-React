@@ -1,15 +1,29 @@
-const CartWidget = ({ quantity }) => {
+import { CartContext } from "../../context/cartContext";
+import { useContext } from "react";
+import { Link } from "react-router-dom";
+
+const CartWidget = () => {
+  const { cart } = useContext(CartContext);
+  const totalProducts = cart.reduce((acc, p) => p.quantity + acc, 0);
   return (
-    <div className="cart-widget">
-      <i
-        className={
-          quantity ? "bi bi-cart-fill cart-icon" : "bi bi-cart4 cart-icon"
-        }
-      />
-      <span className="cart-quantity">
-        <span>{quantity}</span>
-      </span>
-    </div>
+    <>
+      {totalProducts ? (
+        <div className="cart-widget">
+          <Link to={"/cart"}>
+            <i
+              className={
+                totalProducts
+                  ? "bi bi-cart-fill cart-icon"
+                  : "bi bi-cart4 cart-icon"
+              }
+            />
+          </Link>
+          <span className="cart-quantity">{totalProducts}</span>
+        </div>
+      ) : (
+        <></>
+      )}
+    </>
   );
 };
 

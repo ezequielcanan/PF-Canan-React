@@ -1,0 +1,21 @@
+.main-cart {
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+  .container-cart-vacio {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #d1d1d1;
+    border: 1px solid #b6b6b6;
+    border-radius: 15px;
+    h2 {
+      font-size: 18px;
+      font-style: italic;
+    }
+    .btn {
+      width: 200px;
+    }
+  }
+}
