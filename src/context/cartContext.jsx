@@ -23,6 +23,10 @@ const CartContextProvider = ({children}) => {
     return cart.findIndex((product) => product.id === id)
   }
 
+  const minorQuantity = (id) => {
+    (cart[indexOfProductInCart(id)].quantity > 1 && indexOfProductInCart(id) != -1) && (cart[indexOfProductInCart(id)].quantity -= 1, setCart([...cart]))
+  }
+
   const removeItem = (id) => {
     cart.splice(indexOfProductInCart(id), 1)
     setCart([...cart])
@@ -32,7 +36,7 @@ const CartContextProvider = ({children}) => {
     setCart([])
   }
 
-  return <CartContext.Provider value={{isInCart, addItem, indexOfProductInCart, removeItem, clear, cart}}>
+  return <CartContext.Provider value={{isInCart, addItem, indexOfProductInCart, removeItem, clear, minorQuantity, cart}}>
     {children}
   </CartContext.Provider>
 }

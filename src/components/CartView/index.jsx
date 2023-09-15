@@ -1,6 +1,7 @@
 import { CartContext } from "../../context/cartContext"
 import { useContext } from "react"
 import { Link } from "react-router-dom"
+import CartItem from "../CartItem"
 
 const CartView = () => {
   const { cart, addItem, removeItem, clear } = useContext(CartContext)
@@ -12,7 +13,9 @@ const CartView = () => {
           <Link className="btn btn-primary" to="/">Volver a la pagina principal</Link>
         </div>
       ) : (
-        <h1>GOD</h1>
+        cart.map((p) => {
+          return <CartItem key={p.id} product={p} id={p.id} quantity={p.quantity} price={p.price} title={p.title} image={p.image} />
+        })
       )}
     </main>
   )
