@@ -1,7 +1,7 @@
 import "../App.scss";
 import Navbar from "../components/Navbar";
 import ItemListContainer from "../containers/ItemListContainer";
-import ItemDetail from "../components/ItemDetail";
+import ItemDetailContainer from "../containers/ItemDetailContainer";
 import CartView from "../components/CartView";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import CartContextProvider from "../context/cartContext";
@@ -14,7 +14,7 @@ const Router = () => {
         <Routes>
           <Route path="/" element={<ItemListContainer />} />
           <Route path="/category/:category" element={<ItemListContainer />} />
-          <Route path="/item/:id" element={<ItemDetail />} />
+          <Route path="/item/:id" element={<ItemDetailContainer />} />
           <Route path="/cart" element={<CartView />} />
         </Routes>
       </BrowserRouter>

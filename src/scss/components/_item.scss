@@ -7,4 +7,12 @@
     height: 300px;
     object-fit: cover;
   }
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .view-more {
+      width: 150px;
+    }
+  }
 }

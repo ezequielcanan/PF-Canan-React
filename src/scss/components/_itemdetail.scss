@@ -2,12 +2,38 @@
   justify-content: center;
   .container-details {
     display: flex;
-    flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
-    gap: 30px;
+    padding: 70px;
     .container-img-detail {
       border-radius: 10px;
+      width: 400px;
+      height: 500px;
       overflow: hidden;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .container-body-detail {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      h2 {
+        font-size: 36px;
+        font-weight: bold;
+      }
+      .btn {
+        background-color: $bg-buy;
+        padding: 15px 30px;
+        font-size: 24px;
+        width: 180px;
+        transition: all .4s ease;
+        &:active {
+          transform: scale(.9);
+        }
+      }
     }
   }
 }

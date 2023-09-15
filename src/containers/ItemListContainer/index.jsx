@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { fetchProducts } from "../../utils/fetchProducts";
 import { useParams } from "react-router-dom";
-import Item from "../../components/Item";
 import Loading from "../../components/Loading";
+import ItemList from "../../components/ItemList";
 
 const ItemListContainer = () => {
   const [products, setProducts] = useState([]);
@@ -22,15 +22,7 @@ const ItemListContainer = () => {
         {loading ? (
           <Loading speed={5} customText={"Loading..."} />
         ) : (
-          products.map((product) => (
-            <Item
-              key={product.id}
-              id={product.id}
-              description={product.description}
-              title={product.name}
-              image={product.image}
-            />
-          ))
+          <ItemList products={products}/>
         )}
       </section>
     </main>
