@@ -1,8 +1,9 @@
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import CartWidget from "../CartWidget";
 
 const Navbar = () => {
   let categories = ["Motherboard", "CPU", "GPU", "RAM", "SSD", "HDD"];
+
   return (
     <header>
       <nav className="navbar navbar-dark navbar-expand-md">

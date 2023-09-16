@@ -1,8 +1,29 @@
 .main-cart {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
   padding-top: 40px;
+  .order-btn {
+    background-color: $bg-buy;
+    &:active {
+      transform: scale(.95);
+      background-color: $bg-buy;
+    }
+  }
+  .container-finalizar-or-clear {
+    display: flex;
+    gap: 20px;
+    i {
+      font-size: 24px;
+    }
+  }
+  .cartitems-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+    padding-top: 40px;
+  }
   .container-cart-vacio {
     padding: 30px;
     display: flex;

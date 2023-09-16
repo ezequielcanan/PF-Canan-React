@@ -8,9 +8,21 @@
     object-fit: cover;
   }
   .body-cartitem {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    width: 50%;
+    flex-direction: row;
+    gap: 30px;
+    .body-info {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 50%;
+    }
+    .body-operators {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      i {
+        font-size: 36px;
+      }
+    }
   }
 }

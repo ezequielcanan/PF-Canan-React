@@ -8,6 +8,7 @@ const ItemListContainer = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const { category } = useParams();
+
   useEffect(() => {
     fetchProducts().then((products) => {
       category
@@ -16,13 +17,14 @@ const ItemListContainer = () => {
       setLoading(false);
     });
   }, [category]);
+  
   return (
     <main className="container-fluid main">
       <section className="row">
         {loading ? (
           <Loading speed={5} customText={"Loading..."} />
         ) : (
-          <ItemList products={products}/>
+          <ItemList products={products} />
         )}
       </section>
     </main>

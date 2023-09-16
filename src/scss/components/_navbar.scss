@@ -7,19 +7,19 @@
     .navbar-nav {
       gap: 30px;
       
-      a {
+      .nav-link {
         color: $bg-light;
         &:hover {
           color: $bg-green !important;
         }
         &:focus {
-          color: $bg-light;
+          color: $bg-green;
         }
       }
       
-      .active {
-        color: $bg-light !important;
-      }
+      /*.active {
+        color: $bg-green !important;
+      }*/
       
     }
     

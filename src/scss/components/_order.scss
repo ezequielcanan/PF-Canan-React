@@ -1,0 +1,29 @@
+.main-order {
+  display: flex;
+  padding: 40px 0;
+  .container-order-items {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+  .container-form-order {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    div {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      input {
+        width: 400px;
+      }
+    }
+    .btn {
+      background-color: $bg-buy;
+    }
+  }
+}

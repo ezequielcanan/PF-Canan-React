@@ -20,10 +20,10 @@ const ItemDetailContainer = () => {
       {loading ? (
         <Loading speed={5} customText={"Loading..."} />
       ) : (
-        <ItemDetail product={product}/>
+        <ItemDetail product={product} />
       )}
     </main>
-  )
-}
+  );
+};
 
-export default ItemDetailContainer
+export default ItemDetailContainer;
